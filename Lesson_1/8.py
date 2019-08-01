@@ -3,3 +3,15 @@
 #Год является високосным в двух случаях: либо он кратен 4,
 # но при этом не кратен 100, либо кратен 400.
 
+year = int(input("Введите год:"))
+
+first = year % 4
+second = year % 100
+third = year % 400
+
+if first == 0 and second != 0:
+     print(f"{year} висакосный год")
+elif third == 0:
+     print(f"{year} висакосный год")
+else:
+     print(f"{year} не висакосный год")  
