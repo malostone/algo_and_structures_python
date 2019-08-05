@@ -5,3 +5,20 @@
 число, чем то, что загадано. Если за 10 попыток число не отгадано,
 то вывести загаданное число.
 """
+import random
+count = 0
+number = random.randint(0,100)
+while count < 10:
+    user_number = int(input("Введите число"))
+    if user_number > number:
+        print("Число больше загаданного")
+        count +1
+    elif user_number < number:
+        print ("Число меньше загаданного")
+        count +1
+    elif user_number == number:
+        print("Ура, число угадано")
+        break
+
+if count == 10:
+    print("Ваши поптыки закончились")
