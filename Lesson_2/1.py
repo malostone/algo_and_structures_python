@@ -9,3 +9,35 @@
 Также сообщать пользователю о невозможности деления на ноль,
 если он ввел 0 в качестве делителя.
 """
+def inp_sign():
+    sign = input("ВЫ хотите сложить,вычесть,поделить или умножить? для выхода из программы введите 0")
+    return sign
+
+def correct(sign):
+    if sign == "0":
+        return False
+    elif sign == "+":
+        print(first + second)
+    elif sign == "-":
+        print(first - second)
+    elif sign == "/":
+        if second == 0:
+            print("Делить на ноль нельзя")
+        else:
+            print(first / second)
+    elif sign == "*":
+        print(first * second)
+    else:
+        print("Неверно введен знак")
+        sign = inp_sign()
+        correct(sign)
+        
+
+while True:
+    first = int(input("Введите первое число"))
+    second = int(input("Введите второе число"))
+    
+    sign = inp_sign()
+    
+    if correct(sign) == False:
+        break
